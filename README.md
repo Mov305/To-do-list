@@ -1,10 +1,10 @@
 # Porfolio
 
-Awesome Books Library, Add your favorate bookes and remove them if you like
+Awesome ToDo list, Add your Takes and remove them if you like
 
 ## Live Demo
 
-[Click me](https://book-l.vercel.app/)
+[Not avilable yet]()
 
 ## Built With
 
@@ -14,6 +14,7 @@ Visual Studio Code
 HTML
 CSS
 Javascript
+Webpack
 
 ## Getting Started
 
@@ -29,9 +30,8 @@ To get a local copy up and running follow these simple example steps.
 ## Author
 
 GitHub:
-[@sntgopl](https://github.com/sntgopl)
 [@Mov305](https://github.com/Mov305)
-Linkedin: Santiago Pons Lezica & Abdelrhman samy
+Linkedin:Abdelrhman samy
 
 ## Contributing
 
