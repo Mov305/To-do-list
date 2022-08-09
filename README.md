@@ -31,11 +31,11 @@ To get a local copy up and running follow these simple example steps.
 
 GitHub:
 [@Mov305](https://github.com/Mov305)
-Linkedin:Abdelrhman samy
+Linkedin: Abdelrhman samy
 
 ## Contributing
 
-Contributions, issues, and reviews are very welcome!
+Contributions, issues, and reviews are very welcome! 
 
 ## Support
 
