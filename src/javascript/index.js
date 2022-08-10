@@ -1,9 +1,5 @@
-import addUI from './modules/layout.js';
 import '../css/style.css';
-import Tasks from './modules/tasks.js';
+import { loadTasks, addTask } from './modules/addRemovTasks.js';
 
-addUI();
-const ulTasks = document.querySelector('#ulTasks');
-const TaskList = new Tasks();
-
-ulTasks.innerHTML = TaskList.renderTasks();
+loadTasks();
+addTask();
