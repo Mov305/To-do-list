@@ -17,13 +17,15 @@ const addTask = () => {
       TaskList.add(input.value);
       loadTasks();
     }
+    input.value = '';
   });
   input.addEventListener('keypress', (e) => {
     if (e.key === 'Enter' && input.value.length > 0) {
       TaskList.add(input.value);
       loadTasks();
+      input.value = '';
     }
   });
 };
 
-export { loadTasks, addTask };
+export { loadTasks, addTask, TaskList };

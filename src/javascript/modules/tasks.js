@@ -9,6 +9,29 @@ class Tasks {
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
   }
 
+  check(id) {
+    this.tasks.forEach((ele, index) => {
+      if (id === index) {
+        ele.completed = !ele.completed;
+      }
+    });
+    this.renderTasks();
+  }
+
+  clearAll() {
+    this.tasks.forEach((ele, ind) => {
+      if (ele.completed) {
+        if (this.tasks.length === 1) {
+          this.tasks = [];
+        } else {
+          const newTasks = this.tasks.filter((ele) => ele.index !== ind + 1);
+          this.tasks = newTasks;
+        }
+      }
+    });
+    this.indexCrr();
+  }
+
   indexCrr() {
     const newTasks = this.tasks.map((ele, index) => ({ ...ele, index: index + 1 }));
     this.tasks = newTasks;
@@ -57,10 +80,14 @@ class Tasks {
         li.className = 'task-item';
         input.type = 'checkbox';
         input.checked = ele.completed;
+        input.onchange = () => {
+          this.check(ind);
+        };
         div.className = 'task-edit';
         textarea.maxLength = '255';
         textarea.rows = '1';
         textarea.textContent = ele.discription;
+        textarea.style.textDecoration = ele.completed && 'line-through';
         textarea.onkeyup = (e) => {
           ele.discription = e.target.value;
           this.addLS();
@@ -70,7 +97,6 @@ class Tasks {
         span1.onclick = () => this.remove(ind);
         span2.className = 'moveTask';
         span2.innerHTML = '&#8230;';
-
         div.appendChild(textarea);
         [input, div, span1, span2].forEach((child) => li.appendChild(child));
         this.parent.appendChild(li);
