@@ -1,6 +1,6 @@
 # ToDo list
 
-Awesome ToDo list, Add your Takes and remove them if you like
+Awesome ToDo list, Add your tasks and remove them if you like, and keep all your tasks saved into the local storage. Built with javascript, css, html, and webpack
 
 ## Live Demo
 
